@@ -21,7 +21,7 @@ def lambda_handler(event, context):
                 if artifact["name"] == "BuildArtifact":
                     location = artifact["location"]["s3Location"]
 
-        print("Building portfolio from " + str(location)
+        print("Building portfolio from " + str(location))
 
         s3 = boto3.resource('s3', config=Config(signature_version='s3v4'))
     
